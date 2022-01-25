@@ -1,0 +1,52 @@
+C++98(C++20에도 없음)에는 인터페이스가 없지만 
+순수 추상이라고 부르는 것이 일반적입니다.
+
+클래스 인터페이스.
+이 마지막 연습에서는 인터페이스를 사용해 보고 모든 것을 요약해 봅시다!
+다음 AMAteria 클래스의 정의를 완료하고 필요한 멤버 함수를 구현합니다.
+
+
+learnMateria는 매개 변수로 전달된 Materia를 복사하여
+메모리에 저장하여 나중에 복제해야 합니다.
+
+캐릭터 와 마찬가지로 출처는 기껏해야 4개의 마테리아를 알 수 있는데,
+이것은 반드시 유일하지는 않다.
+
+createMateria(std::string const &)는 새로운 Materia를 반환하며,
+이 Materia는 형식과 매개변수가 동일한
+Materia(소스에 의해 이전에 학습된 Materia)의 복사본이 될 것이다.
+
+형식을 알 수 없는 경우 0을 반환합니다.
+
+간단히 말해서, 당신의 소스는 마테리아의 "템플릿"을 학습하고
+필요에 따라 다시 만들 수 있어야 한다.
+
+그러면 "실제" 유형을 몰라도 Materia를 만들 수 있습니다.
+
+단지 문자열만 식별하면 됩니다.
+
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
+
+# include <string>
+# include <iostream>
+# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
+
+# define MATERIASOURCE_SIZE 4
+
+class MateriaSource: public IMateriaSource
+{
+private:
+	AMateria *materia_types[MATERIASOURCE_SIZE];
+public:
+	MateriaSource( void );
+	MateriaSource( const MateriaSource& origin );
+	MateriaSource& operator =(const MateriaSource& origin);
+
+	virtual ~MateriaSource();
+	virtual void learnMateria(AMateria* origin);
+	virtual AMateria* createMateria(std::string const & type);
+};
+
+#endif
