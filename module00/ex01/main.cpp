@@ -6,12 +6,12 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:24:04 by silim             #+#    #+#             */
-/*   Updated: 2022/01/26 00:11:31 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 00:21:40 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include "Phonebook.hpp"
+#include "contact.hpp"
+#include "phonebook.hpp"
 
 int	main(){
 	std::string cmd;

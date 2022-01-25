@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:23:47 by silim             #+#    #+#             */
-/*   Updated: 2022/01/26 00:12:04 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 00:21:49 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "Contact.hpp"
+#include "contact.hpp"
 
 class PhoneBook {
 	private:
