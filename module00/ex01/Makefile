@@ -6,7 +6,7 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 18:23:55 by silim             #+#    #+#              #
-#    Updated: 2022/01/25 23:18:24 by silim            ###   ########.fr        #
+#    Updated: 2022/01/26 00:16:54 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = phonebook
 FLAGS	=	-Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
-			phonebook.cpp \
-			contact.cpp \
+			Phonebook.cpp \
+			Contact.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 
