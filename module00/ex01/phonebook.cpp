@@ -6,11 +6,11 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:23:50 by silim             #+#    #+#             */
-/*   Updated: 2022/01/25 23:30:28 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 00:11:34 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
 PhoneBook::PhoneBook(){
 	m_index = 0;

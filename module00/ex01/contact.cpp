@@ -6,11 +6,11 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:24:10 by silim             #+#    #+#             */
-/*   Updated: 2022/01/14 19:52:25 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 00:11:23 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(){
 	m_first_name = "";
