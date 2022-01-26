@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:23:50 by silim             #+#    #+#             */
-/*   Updated: 2022/01/26 00:21:53 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 13:05:47 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void	PhoneBook::PrintHeader(){
 
 void	PhoneBook::PrintBody(){
 	for (int i = 0; i < 8; i++){
+		if (!m_contact[i].GetCreated())
+			break;
 		std::cout << "|" << std::setw(10) << i + 1;
 		PrintField(m_contact[i].GetFirstName());
 		PrintField(m_contact[i].GetLastName());
@@ -64,13 +66,17 @@ void	PhoneBook::SearchContact(){
 		std::cin >> index;
 		if (index == 0)
 			return ;
+		if (!m_contact[index-1].GetCreated()){
+			std::cout << "해당하는 인덱스가 없습니다." << std::endl;
+			continue;
+		}
 		if (std::cin.fail()){
 			std::cout << "잘못된 인덱스 값입니다." << std::endl;
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			continue;
 		}
-		if (index > 8 || index < 0){
+		if (index > 8 || index <= 0){
 			std::cout << "잘못된 인덱스 값입니다." << std::endl;
 			continue;
 		}

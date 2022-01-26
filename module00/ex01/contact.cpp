@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:24:10 by silim             #+#    #+#             */
-/*   Updated: 2022/01/26 00:21:43 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/26 12:58:13 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Contact::Contact(){
 	m_nickname = "";
 	m_phone_number = "";
 	m_darkest_secret = "";
+	m_created = false;
 }
 
 Contact::Contact(std::string first_name, std::string last_name, std::string nickname,
@@ -27,6 +28,7 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 	m_nickname = nickname;
 	m_phone_number = phone_number;
 	m_darkest_secret = darkest_secret;
+	m_created = true;
 };
 
 std::string Contact::GetFirstName(){
@@ -47,4 +49,9 @@ std::string Contact::GetPhoneNumber(){
 
 std::string Contact::GetDarkestSecret(){
 	return m_darkest_secret;
+}
+
+
+bool	Contact::GetCreated(){
+	return m_created;
 }
