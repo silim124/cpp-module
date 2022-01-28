@@ -6,11 +6,11 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/28 18:11:32 by silim             #+#    #+#              #
-#    Updated: 2022/01/28 18:11:33 by silim            ###   ########.fr        #
+#    Updated: 2022/01/28 18:28:31 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex06
+NAME = karenFilter
 
 CXX = clang++ -std=c++98
 
