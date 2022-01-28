@@ -11,11 +11,7 @@ OBJS	=	$(SRCS:.c=.o)
 
 CXX = clang++ -std=c++98
 
-CXXFLAGS = -Wall -Wextra -Werrorng++ -std=c++98
-
 CXXFLAGS = -Wall -Wextra -Werror
-
-
 
 RM		=	rm -f
 

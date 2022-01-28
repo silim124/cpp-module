@@ -13,14 +13,12 @@ CXX = clang++ -std=c++98
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-
-
 RM		=	rm -f
 
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 fclean	:
 			$(RM) $(NAME)
 

@@ -10,18 +10,14 @@ OBJS	=	$(SRCS:.c=.o)
 
 CXX = clang++ -std=c++98
 
-CXXFLAGS = -Wall -Wextra -Werrorng++ -std=c++98
-
-CXXFLAGS = -Wall -Wextra -Werror
-
-
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -f
 
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 fclean	:
 			$(RM) $(NAME)

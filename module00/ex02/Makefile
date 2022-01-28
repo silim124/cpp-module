@@ -6,7 +6,7 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 18:23:28 by silim             #+#    #+#              #
-#    Updated: 2022/01/28 17:54:20 by silim            ###   ########.fr        #
+#    Updated: 2022/01/28 18:16:38 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS	=	$(SRCS:.c=.o)
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-			clang++ -std=c++98 $(FLAGS) -I. -o $(NAME) $(OBJS)
+			$(CXX) $(CXXFLAGS) -I. -o $(NAME) $(OBJS)
 
 fclean:
 		rm -f $(NAME)

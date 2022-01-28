@@ -14,7 +14,7 @@ CXXFLAGS = -Wall -Wextra -Werror
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 fclean	:
 			$(RM) $(NAME)
 
