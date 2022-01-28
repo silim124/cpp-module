@@ -73,6 +73,11 @@ const char* Form::FileException::what() const throw()
 	return ("파일을 열지 못했습니다.");
 }
 
+const char* Form::UnknownFormException::what() const throw()
+{
+	return ("알 수 없는 형식입니다.");
+}
+
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
 	os << f.getName() << "의 등급은 " << f.getGrade() << "이고, 서명 가능 등급은 " << f.getSignGrade() << "입니다.";

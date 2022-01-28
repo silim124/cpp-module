@@ -8,16 +8,16 @@ SRCS	=	main.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 
-CC		=	c++
+CXX = clang++ -std=c++98
 
-FLAGS	=	-Wall -Werror -Wextra
+CXXFLAGS = -Wall -Wextra -Werror
 
 RM		=	rm -f
 
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME) $(RM) $(NAME)
 
 fclean	:
 			$(RM) $(NAME)

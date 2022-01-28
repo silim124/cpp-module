@@ -6,12 +6,12 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:02:03 by silim             #+#    #+#             */
-/*   Updated: 2022/01/16 22:26:17 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/28 17:58:55 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __ZOMBIE_H__
-# define __ZOMBIE_H__
+#ifndef __ZOMBIE_HPP__
+# define __ZOMBIE_HPP__
 
 #include <string>
 #include <iostream>

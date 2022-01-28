@@ -6,13 +6,15 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 22:16:46 by silim             #+#    #+#              #
-#    Updated: 2022/01/17 22:16:47 by silim            ###   ########.fr        #
+#    Updated: 2022/01/28 17:46:15 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex03
 
-FLAGS	=	-Wall -Wextra -Werror
+CXX = clang++ -std=c++98
+
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
 			HumanA.cpp \
@@ -24,7 +26,7 @@ OBJS	=	$(SRCS:.c=.o)
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-			c++ $(FLAGS) -I. -o $(NAME) $(OBJS)
+			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 fclean:
 		rm -f $(NAME)

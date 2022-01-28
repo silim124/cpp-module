@@ -1,25 +1,27 @@
-NAME	=	ex02
+NAME	=	ex03
 
 SRCS	=	main.cpp \
 			Bureaucrat.cpp \
 			Form.cpp \
 			ShrubberyCreationForm.cpp \
 			RobotomyRequestForm.cpp \
-			PresidentialPardonForm.cpp
+			PresidentialPardonForm.cpp \
+			Intern.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 
-CC		=	c++
+CXX = clang++ -std=c++98
 
-FLAGS	=	-Wall -Werror -Wextra
+CXXFLAGS = -Wall -Wextra -Werror
+
+
 
 RM		=	rm -f
 
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 fclean	:
 			$(RM) $(NAME)
 

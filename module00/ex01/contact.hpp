@@ -6,12 +6,12 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:24:07 by silim             #+#    #+#             */
-/*   Updated: 2022/01/26 12:57:32 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/28 17:58:39 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CONTACT_H__
-# define __CONTACT_H__
+#ifndef __CONTACT_HPP__
+# define __CONTACT_HPP__
 
 #include <string>
 

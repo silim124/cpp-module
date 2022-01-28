@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/28 18:11:38 by silim             #+#    #+#             */
+/*   Updated: 2022/01/28 18:11:39 by silim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
 void Karen::debug(void){
@@ -17,8 +29,7 @@ void Karen::error(void){
 
 void Karen::complain(std::string level){
 	std::string	levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	std::string *level_ptr = std::find(levels, levels+4, level);
-	int index = level_ptr - levels;
+	int index = std::find(levels, levels+4, level) - levels;
 
 	switch (index){
 		case 0:

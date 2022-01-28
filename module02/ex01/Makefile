@@ -1,6 +1,8 @@
 NAME = ex01
 
-FLAGS	=	-Wall -Wextra -Werror
+CXX = clang++ -std=c++98
+
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
 			Fixed.cpp \
@@ -10,8 +12,7 @@ OBJS	=	$(SRCS:.c=.o)
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-			c++ $(FLAGS) -I. -o $(NAME) $(OBJS)
-
+			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 fclean:
 		rm -f $(NAME)
 

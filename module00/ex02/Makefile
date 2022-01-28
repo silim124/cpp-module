@@ -6,13 +6,15 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 18:23:28 by silim             #+#    #+#              #
-#    Updated: 2022/01/25 23:44:28 by silim            ###   ########.fr        #
+#    Updated: 2022/01/28 17:54:20 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = account
 
-FLAGS	=	-Wall -Wextra -Werror
+CXX = clang++ -std=c++98
+
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS	=	tests.cpp \
 			Account.cpp \
