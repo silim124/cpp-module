@@ -10,9 +10,10 @@ class Point
 		Point();
 		Point(Point const & point);
 		Point(Fixed const x, Fixed const y);
+		Point(const float _x, const float _y);
 
-		Fixed	get_x(void) const;
-		Fixed	get_y(void) const;
+		Fixed	getX(void) const;
+		Fixed	getY(void) const;
 
 		~Point();
 	private:
@@ -21,5 +22,6 @@ class Point
 
 		Point & operator=(Point const & point);
 };
+bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif

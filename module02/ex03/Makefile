@@ -6,6 +6,8 @@ CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
 			Fixed.cpp \
+			Point.cpp \
+			bsp.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 

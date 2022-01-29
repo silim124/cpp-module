@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 18:09:19 by silim             #+#    #+#             */
-/*   Updated: 2022/01/28 18:27:03 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/29 02:18:08 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void Karen::error(void){
 void Karen::complain(std::string level){
 	void (Karen::*complains[4])(void) = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
 	std::string	levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	int index = std::find(levels, levels+4, level) - levels;
-	(index < 4) ? (this->*complains[index])(): (void)0;
+	for (int i = 0; i < 4; i++)
+		if (level == levels[i])
+			(this->*complains[i])();
 };

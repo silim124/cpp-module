@@ -12,6 +12,10 @@ Point::Point(Fixed const x, Fixed const y) : _x(x), _y(y)
 {
 }
 
+Point::Point(const float x, const float y): _x(x), _y(y)
+{
+}
+
 Point::~Point()
 {
 }
@@ -22,12 +26,12 @@ Point &	Point::operator=(Point const & point)
 	return (*this);
 }
 
-Fixed	Point::get_x(void) const
+Fixed	Point::getX(void) const
 {
 	return (_x);
 }
 
-Fixed	Point::get_y(void) const
+Fixed	Point::getY(void) const
 {
 	return (_y);
 }

@@ -5,36 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 22:13:20 by silim             #+#    #+#             */
-/*   Updated: 2022/01/22 18:55:26 by silim            ###   ########.fr       */
+/*   Created: 2022/01/29 15:36:58 by silim             #+#    #+#             */
+/*   Updated: 2022/01/29 16:13:32 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
-
-#include <iostream>
 #include "Point.hpp"
 
-bool	bsp(Point const a, Point const b, Point const c, Point const point);
+int main( void ) {
+  Point a1(4, 0), b1(4, 2), c1(4, 4), p1(4, 1);
+  Point a2(0, 0), b2(0, 4), c2(4, 0), p2(0, 0);
+  Point a3(0, 0), b3(0, 4), c3(4, 0), p3(1, 1);
+  Point a4(0, 0), b4(0, 4), c4(4, 0), p4(2, 2);
+  Point a5(0, 0), b5(0, 4), c5(4, 0), p5(2, 1.923323);
 
-int	main(void)
-{
-	Point	a(0, 0);
-	Point	b(20, 0);
-	Point	c(10, 30);
-	Point	in(10, 15);
-	Point	out(30, 50);
+  std::cout << "p1(4, 1) - " << bsp(a1, b1, c1, p1) << std::endl;
+  std::cout << "p2(0, 0) - " << bsp(a2, b2, c2, p2) << std::endl;
+  std::cout << "p3(1, 1) - " << bsp(a3, b3, c3, p3) << std::endl;
+  std::cout << "p4(2, 2) - " << bsp(a4, b4, c4, p4) << std::endl;
+  std::cout << "p5(2, 1.923323) - " << bsp(a5, b5, c5, p5) << std::endl;
 
-	std::cout << "Point \"in\" created at x-" << in.get_x() << " y-" << in.get_y() << std::endl;
-	std::cout << "Point \"out\" created at x-" << out.get_x() << " y-" << out.get_y() << std::endl;
-	if (bsp(a, b, c, in))
-		std::cout << "\"in\" is in the triangle" << std::endl;
-	else
-		std::cout << "\"in\" is out of the triangle" << std::endl;
-	if (bsp(a, b, c, out))
-		std::cout << "\"out\" is in the triangle" << std::endl;
-	else
-		std::cout << "\"out\" is out of the triangle" << std::endl;
-	return 0;
+  return 0;
 }
