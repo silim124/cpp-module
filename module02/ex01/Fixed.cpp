@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 16:17:36 by silim             #+#    #+#             */
-/*   Updated: 2022/01/29 16:17:37 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/29 16:30:10 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ Fixed::~Fixed(){
 	std::cout << "Destrutor called" << std::endl;
 };
 
-std::ostream&	operator<<(std::ostream &out, const Fixed &fixed)
+std::ostream &	operator<<(std::ostream &out, const Fixed &fixed)
 {
 	out << fixed.toFloat();
 	return out;

@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:04:05 by silim             #+#    #+#             */
-/*   Updated: 2022/01/29 16:17:41 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/29 16:30:02 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ class Fixed {
 		const static int	_bits;
 };
 
-std::ostream &	operator<<(std::ostream & s, const Fixed & fixed);
+std::ostream &	operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
