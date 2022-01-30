@@ -4,56 +4,25 @@
 
 int	main(void)
 {
-	DiamondTrap	a("A");
-
+	DiamondTrap a("A");
+	DiamondTrap b("B");
 	std::cout << std::endl;
+
 	a.whoAmI();
+	b.whoAmI();
+	b.highFivesGuys();
 	std::cout << std::endl;
 
-	{
-		DiamondTrap b("B");
-		DiamondTrap c("C");
-
-
-		std::cout << std::endl;
-
-		b.whoAmI();
-		c.whoAmI();
-		c.highFivesGuys();
-
-		std::cout << std::endl;
-
-		b.attack("C");
-		c.takeDamage(b.getAttackDamage());
-
-		std::cout << std::endl;
-
-		b.attack("C");
-		c.takeDamage(b.getAttackDamage());
-
-		std::cout << std::endl;
-
-		b.guardGate();
-
-		std::cout << std::endl;
-	}
-
+	a.attack("B");
+	b.takeDamage(a.getAttackDamage());
 	std::cout << std::endl;
 
-	DiamondTrap d;
-
+	a.attack("B");
+	b.takeDamage(a.getAttackDamage());
 	std::cout << std::endl;
 
-	d.whoAmI();
-
+	a.guardGate();
 	std::cout << std::endl;
 
-	d = a;
-
-	std::cout << std::endl;
-
-	d.whoAmI();
-
-	std::cout << std::endl;
 	return (0);
 }

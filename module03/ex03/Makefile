@@ -10,7 +10,7 @@ OBJS	=	$(SRCS:.c=.o)
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 RM		=	rm -f
 

@@ -30,8 +30,10 @@ DiamondTrap::~DiamondTrap(){
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap & diamond_trap) {
-	FragTrap::operator=(diamond_trap);
-	_name = diamond_trap._name;
+	_name = diamond_trap.getName();
+	_hit_points = diamond_trap.getHitpoints();
+	_energy_points = diamond_trap.getEnergyPoints();
+	_attack_damage = diamond_trap.getAttackDamage();
 	std::cout << "diamondTrap operator = (" << _name << ") called" << std::endl;
 	return *this;
 }
