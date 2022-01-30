@@ -8,8 +8,7 @@
 #define CEP				10
 #define CAD				0
 
-class	ClapTrap
-{
+class	ClapTrap{
 	protected :
 		std::string		_name;
 		unsigned int	_hit_points;

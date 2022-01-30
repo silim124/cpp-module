@@ -34,6 +34,10 @@ FragTrap& FragTrap::operator=(const FragTrap & frag_trap) {
 	return *this;
 }
 
+void	FragTrap::attack(std::string const& target) {
+	std::cout << "FragTrap " << _name << "은 " << target << "에게 " << _attack_damage << "의 피해를 입혔습니다." << std::endl;
+}
+
 void	FragTrap::highFivesGuys(void)
 {
 	std::cout << "FragTrap " << _name << "님이 하이파이브를 요청하였습니다." << std::endl;

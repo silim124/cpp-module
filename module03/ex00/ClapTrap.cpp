@@ -2,11 +2,11 @@
 
 ClapTrap::ClapTrap():
 		_name("unknown"),
-		_hit_points(10),
-		_energy_points(10),
-		_attack_damage(0)
+		_hit_points(HP),
+		_energy_points(EP),
+		_attack_damage(AD)
 {
-	std::cout << "Clap생성자를 불러왔습니다." << std::endl;
+	std::cout << "ClapTrap 생성자를 불러왔습니다." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name):
@@ -15,20 +15,26 @@ ClapTrap::ClapTrap(std::string name):
 		_energy_points(EP),
 		_attack_damage(AD)
 {
-	std::cout << "생성자를 불러왔습니다." << std::endl;
+	std::cout << "ClapTrap 생성자를 불러왔습니다." << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap & clap_trap) :
-		_name(clap_trap._name),
-		_hit_points(clap_trap._hit_points),
-		_energy_points(clap_trap._energy_points),
-		_attack_damage(clap_trap._attack_damage)
+ClapTrap::ClapTrap(const ClapTrap & clap_trap)
 {
-	std::cout << "복사생성자를 불러왔습니다." << std::endl;
+	*this = clap_trap;
+	std::cout << "ClapTrap 복사생성자를 불러왔습니다." << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap & clap_trap) {
+	_name = clap_trap._name;
+	_hit_points = clap_trap._hit_points;
+	_energy_points = clap_trap._energy_points;
+	_attack_damage = clap_trap._attack_damage;
+	std::cout << "ClapTrap 대입연산자(" << _name << ")를 불러왔습니다." << std::endl;
+	return *this;
 }
 
 ClapTrap::~ClapTrap(){
-	std::cout << "소멸자를 불러왔습니다." << std::endl;
+	std::cout << "ClapTrap 소멸자를 불러왔습니다." << std::endl;
 }
 
 void	ClapTrap::attack(std::string const & target)
@@ -37,18 +43,23 @@ void	ClapTrap::attack(std::string const & target)
 }
 
 void	ClapTrap::takeDamage(unsigned int amount){
-	std::cout << "ClapTrap " << _name << "은 " << amount << "의 피해를 입었습니다." << std::endl;
 	if (amount < _hit_points)
 	{
 		 _hit_points -= amount;
+		std::cout << "ClapTrap " << _name << "은 " << amount << "의 피해를 입었습니다." << std::endl;
 		std::cout << "ClapTrap " << _name << "의 체력은 "<<  _hit_points << "이 남았습니다. " << std::endl;
+	}
+	else if (_hit_points == 0)
+	{
+		std::cout << "ClapTrap " << _name << " 은 이미 사망하였습니다." << std::endl;
 	}
 	else
 	{
 		_hit_points = 0;
+		std::cout << "ClapTrap " << _name << "은 " << amount << "의 피해를 입었습니다." << std::endl;
 		std::cout << "ClapTrap " << _name << " 은 사망하였습니다." << std::endl;
 	}
-};
+}
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {

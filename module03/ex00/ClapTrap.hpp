@@ -6,7 +6,7 @@
 
 #define HP				10
 #define EP				10
-#define AD				30
+#define AD				0
 
 class	ClapTrap
 {
@@ -20,6 +20,7 @@ class	ClapTrap
 		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap & clap_trap);
+		ClapTrap & operator=(const ClapTrap & clap_trap);
 
 		void attack(std::string const& target);
 		void takeDamage(unsigned int amount);

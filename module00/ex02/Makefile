@@ -6,13 +6,13 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 18:23:28 by silim             #+#    #+#              #
-#    Updated: 2022/01/28 18:16:38 by silim            ###   ########.fr        #
+#    Updated: 2022/01/30 18:37:19 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = account
 
-CXX = clang++ -std=c++98
+CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 

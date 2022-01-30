@@ -16,8 +16,9 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	std::cout << "ScavTrap 생성자를 불러왔습니다." << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap & scav_trap): ClapTrap(scav_trap)
+ScavTrap::ScavTrap(const ScavTrap & scav_trap)
 {
+	*this = scav_trap;
 	std::cout << "ScavTrap 복사생성자를 불러왔습니다." << std::endl;
 }
 
@@ -40,6 +41,5 @@ void	ScavTrap::attack(std::string const& target)
 }
 
 void	ScavTrap::guardGate(void){
-		std::cout << "Gate keeper mode에 진입하였습니다." << std::endl;
-
+		std::cout << _name << "은 Gate keeper mode에 진입하였습니다." << std::endl;
 }

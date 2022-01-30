@@ -1,11 +1,11 @@
-NAME	=	Game
+NAME	=	ex00
 
 SRCS	=	main.cpp \
 			ClapTrap.cpp
 
 OBJS	=	$(SRCS:.c=.o)
 
-CXX = clang++ -std=c++98
+CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 

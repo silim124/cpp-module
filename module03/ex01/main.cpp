@@ -2,13 +2,13 @@
 
 int	main(void)
 {
-	ScavTrap	a("a");
+	ScavTrap	a;
 	ScavTrap	b("b");
 	ScavTrap	c;
 
 	std::cout << std::endl;
 	a.attack(b.getName());
-	b.takeDamage(20);
+	b.takeDamage(a.getAttackDamage());
 
 	std::cout << std::endl;
 

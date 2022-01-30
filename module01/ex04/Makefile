@@ -6,13 +6,13 @@
 #    By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/28 18:09:32 by silim             #+#    #+#              #
-#    Updated: 2022/01/28 18:09:32 by silim            ###   ########.fr        #
+#    Updated: 2022/01/30 18:37:20 by silim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex04
 
-CXX = clang++ -std=c++98
+CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 

@@ -6,7 +6,7 @@ SRCS	=	main.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 
-CXX = clang++ -std=c++98
+CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 

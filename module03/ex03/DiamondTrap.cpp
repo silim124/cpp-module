@@ -1,18 +1,22 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): ClapTrap("unknown_clap_name"), _name("unknown")
+DiamondTrap::DiamondTrap()
 {
-	_hit_points = FHP;
-	_energy_points = FEP;
-	_attack_damage = FAD;
+	_name = "unknown";
+	ClapTrap::_name = _name + "_clap_name";
+	_hit_points = FragTrap::_hit_points;
+	_energy_points = ScavTrap::_energy_points;
+	_attack_damage = FragTrap::_attack_damage;
 	std::cout << "DiamondTrap 생성자를 불러왔습니다." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), _name(name)
+DiamondTrap::DiamondTrap(std::string name)
 {
-	_hit_points = FHP;
-	_energy_points = FEP;
-	_attack_damage = FAD;
+	_name = name;
+	ClapTrap::_name = name + "_clap_name";
+	_hit_points = FragTrap::_hit_points;
+	_energy_points = ScavTrap::_energy_points;
+	_attack_damage = FragTrap::_attack_damage;
 	std::cout << "DiamondTrap 생성자를 불러왔습니다." << std::endl;
 }
 
@@ -32,7 +36,12 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap & diamond_trap) {
 	return *this;
 }
 
-void	DiamondTrap::whoAmI(void) const
+void	DiamondTrap::whoAmI() const
 {
 	std::cout << "이 DiamondTrap의 이름은 " << _name << "이고 이 ClapTrap의 이름은 " << ClapTrap::_name << "입니다." << std::endl;
 }
+
+void	DiamondTrap::attack(std::string const & target)
+{
+	ScavTrap::attack(target);
+};
