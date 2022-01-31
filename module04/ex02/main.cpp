@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:56:13 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:56:14 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 00:52:29 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,33 @@
 int main()
 {
 	//Animal test;
-	Animal* dog = new Dog();
-	Animal* cat = new Cat();
+	Animal* animal[2];
+	animal[0] = new Dog();
+	animal[1] = new Cat();
 	std::cout << "-------------------" << std::endl;
 
-	dog->addIdea("잠자기");
-	dog->addIdea("먹기");
-	dog->addIdea("뛰어놀기");
-	dog->addIdea("물기");
-	dog->addIdea("달리기");
-	dog->addIdea("재롱부리기");
-	dog->printIdeas();
-	dog->chooseIdea();
-	dog->makeSound();
+	animal[0]->addIdea("잠자기");
+	animal[0]->addIdea("먹기");
+	animal[0]->addIdea("뛰어놀기");
+	animal[0]->addIdea("물기");
+	animal[0]->addIdea("달리기");
+	animal[0]->addIdea("재롱부리기");
+	animal[0]->printIdeas();
+	animal[0]->chooseIdea();
+	animal[0]->makeSound();
 
 	std::cout << "-------------------" << std::endl;
-	cat->addIdea("잠자기");
-	cat->addIdea("먹기");
-	cat->addIdea("뛰어놀기");
-	cat->addIdea("할퀴기");
- 	cat->printIdeas();
- 	cat->chooseIdea();
-	cat->makeSound();
+	animal[1]->addIdea("잠자기");
+	animal[1]->addIdea("먹기");
+	animal[1]->addIdea("뛰어놀기");
+	animal[1]->addIdea("할퀴기");
+ 	animal[1]->printIdeas();
+ 	animal[1]->chooseIdea();
+	animal[1]->makeSound();
 
 	std::cout << "-------------------" << std::endl;
-	delete dog;
-	delete cat;
+	delete animal[0];
+	delete animal[1];
 	std::cout << "-------------------" << std::endl;
 	std::cout << "-------------------" << std::endl;
 

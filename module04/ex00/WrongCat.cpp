@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:54:52 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:54:53 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/31 23:51:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 WrongCat::WrongCat()
 {
 	_type = "WrongCat";
-	std::cout << "야옹이 생성자를 호출하였습니다." << std::endl;
+	std::cout << "잘못된 야옹이 생성자를 호출하였습니다." << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& wrong_cat)
 {
 	_type = wrong_cat._type;
-	std::cout << "야옹이 복사 생성자를 호출하였습니다." << std::endl;
+	std::cout << "잘못된 야옹이 복사 생성자를 호출하였습니다." << std::endl;
 }
 
 WrongCat&	WrongCat::operator=(const WrongCat& wrong_cat){

@@ -6,11 +6,11 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:56:31 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:56:31 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 00:48:51 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "Cure.hpp"
+#include "Cure.hpp"
 
 Cure::Cure(): AMateria::AMateria("cure")
 {

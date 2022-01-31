@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:54:41 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:54:42 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 00:07:16 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,6 @@ int main()
 	delete cat, delete dog, delete animal;
 
 	std::cout << std::endl << "--------------------------------" << std::endl;
-
-
-
-
 
 	return (0);
 }

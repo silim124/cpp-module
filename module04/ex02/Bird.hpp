@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:55:53 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:55:53 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 00:29:27 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Bird : public Animal
 {
-	private:
-
 	public:
 		Bird();
 		Bird(const Bird& bird);
