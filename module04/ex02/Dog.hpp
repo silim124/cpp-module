@@ -15,13 +15,12 @@ class Dog : public Animal
 		Dog& operator=(const Dog& dog);
 		Animal&	operator=(const Animal &animal);
 
-		void			makeSound() const;
-		void			printIdeas();
-		void			addIdea(std::string idea);
-		std::string		chooseIdea();
-		Brain	*getBrain() const;
+		virtual void					makeSound() const;
+		virtual void					printIdeas();
+		virtual void					addIdea(std::string idea);
+		virtual std::string				chooseIdea();
 
-		~Dog();
+		virtual ~Dog();
 };
 
 #endif

@@ -20,19 +20,8 @@ Cat&	Cat::operator=(const Cat& cat){
 	return (*this);
 }
 
-Animal &	Cat::operator=(const Animal &cat){
-	*(_brain) = *(cat.getBrain());
-	std::cout << "Cat 대입연산자 (" << _type << ")을 호출하였습니다." << std::endl;
-	return (*this);
-}
-
 void	Cat::makeSound() const{
 	std::cout << "야옹" << std::endl;
-}
-
-Brain	*Cat::getBrain() const
-{
-	return (this->_brain);
 }
 
 void	Cat::printIdeas(){

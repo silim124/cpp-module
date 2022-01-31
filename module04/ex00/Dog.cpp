@@ -8,7 +8,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog& dog)
 {
-	_type = dog._type;
+	*this = dog;
 	std::cout << "멍멍이 복사 생성자를 호출하였습니다." << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 20:13:17 by silim             #+#    #+#             */
-/*   Updated: 2022/01/30 20:13:18 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/30 22:52:25 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+
 	ScavTrap	a;
 	ScavTrap	b("b");
 	ScavTrap	c;
@@ -40,7 +41,7 @@ int	main(void)
 	std::cout << std::endl;
 
 	b.guardGate();
-
 	std::cout << std::endl;
+
 	return (0);
 }

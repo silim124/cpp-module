@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:13:20 by silim             #+#    #+#             */
-/*   Updated: 2022/01/22 03:16:39 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/30 23:28:04 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int main( void ) {
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << (a > b) << std::endl;
+	std::cout << (a < b) << std::endl;
+	std::cout << (a == b) << std::endl;
 
 	return 0;
 }

@@ -12,14 +12,13 @@ class Animal {
 	public:
 		Animal();
 		Animal(const Animal& animal);
-		virtual Animal&	operator=(const Animal &animal);
+		Animal&	operator=(const Animal &animal);
 
 		std::string				getType() const;
-		virtual void			makeSound();
+		virtual void			makeSound() const;
 		virtual void			printIdeas() = 0;
 		virtual void			addIdea(std::string idea) = 0;
 		virtual	std::string		chooseIdea() = 0;
-		virtual Brain			*getBrain() const  = 0;
 
 		virtual ~Animal();
 };

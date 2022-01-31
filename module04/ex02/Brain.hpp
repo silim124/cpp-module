@@ -18,7 +18,7 @@ class Brain{
 		void		printIdeas();
 		void		addIdea(std::string idea);
 		std::string	chooseIdea();
-		Brain		*getBrain() const;
+		std::string	getBrain();
 
 		~Brain();
 };

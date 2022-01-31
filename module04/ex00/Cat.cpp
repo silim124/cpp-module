@@ -8,7 +8,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat& cat)
 {
-	_type = cat._type;
+	*this = cat;
 	std::cout << "야옹이 복사 생성자를 호출하였습니다." << std::endl;
 }
 

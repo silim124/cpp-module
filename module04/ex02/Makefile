@@ -5,6 +5,7 @@ SRCS	=	main.cpp \
 			Dog.cpp \
 			Cat.cpp \
 			Brain.cpp \
+			Bird.cpp \
 
 OBJS	=	$(SRCS:.c=.o)
 

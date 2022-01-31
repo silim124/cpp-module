@@ -2,6 +2,7 @@
 
 Brain::Brain( void )
 {
+	_num = 0;
 	std::cout << "뇌 생성자를 호출하였습니다." << std::endl;
 }
 
@@ -35,7 +36,6 @@ void Brain::addIdea(std::string idea)
 		std::cout << "더 이상 배울 수 없습니다." << std::endl;
 }
 
-
 std::string	Brain::chooseIdea()
 {
 	if (_num == 0)
@@ -50,4 +50,8 @@ Brain& Brain::operator=(Brain const &brain) {
 	_num = brain._num;
 	std::cout << "Brain 대입연산자를 호출하였습니다." << std::endl;
 	return *this;
+}
+
+std::string	Brain::getBrain(){
+	return _ideas[0];
 }

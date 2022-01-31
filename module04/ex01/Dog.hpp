@@ -13,15 +13,14 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog& dog);
 		Dog& operator=(const Dog& dog);
-		virtual Animal&	operator=(const Animal &animal);
+		Animal&	operator=(const Animal &animal);
 
-		void			makeSound() const;
-		void			printIdeas();
-		void			addIdea(std::string idea);
-		std::string		chooseIdea();
-		virtual Brain	*getBrain() const;
+		virtual void					makeSound() const;
+		virtual void					printIdeas();
+		virtual void					addIdea(std::string idea);
+		virtual std::string				chooseIdea();
 
-		~Dog();
+		virtual ~Dog();
 };
 
 #endif

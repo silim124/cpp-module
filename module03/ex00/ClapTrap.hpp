@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 20:13:03 by silim             #+#    #+#             */
-/*   Updated: 2022/01/30 20:13:04 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/30 21:34:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	ClapTrap
 	public :
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap & clap_trap);
+		ClapTrap(const ClapTrap &clap_trap);
 		ClapTrap & operator=(const ClapTrap & clap_trap);
 
 		void attack(std::string const& target);

@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 20:14:18 by silim             #+#    #+#             */
-/*   Updated: 2022/01/30 20:14:18 by silim            ###   ########.fr       */
+/*   Updated: 2022/01/30 21:58:49 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #define SHP				100
 #define SEP				50
-#define SAD				20
+#define SAD				20s
 
 class ScavTrap: virtual public ClapTrap
 {

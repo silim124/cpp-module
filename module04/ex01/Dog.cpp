@@ -21,20 +21,9 @@ Dog&	Dog::operator=(const Dog& dog)
 	return (*this);
 }
 
-Animal &	Dog::operator=(const Animal &dog){
-	*(_brain) = *(dog.getBrain());
-	std::cout << "Dog 대입연산자 (" << _type << ")을 호출하였습니다." << std::endl;
-	return (*this);
-}
-
 void	Dog::makeSound() const
 {
 	std::cout << "왈왈" << std::endl;
-}
-
-Brain	*Dog::getBrain() const
-{
-	return (this->_brain);
 }
 
 void	Dog::printIdeas(){
