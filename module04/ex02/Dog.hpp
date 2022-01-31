@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:56:10 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:56:10 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 02:53:35 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog& dog);
 		Dog& operator=(const Dog& dog);
-		Animal&	operator=(const Animal &animal);
 
 		virtual void					makeSound() const;
 		virtual void					printIdeas();

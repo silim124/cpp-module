@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 21:55:10 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:55:11 by silim            ###   ########.fr       */
+/*   Created: 2022/01/31 21:55:55 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 02:48:54 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@ Brain::Brain( void )
 {
 	_num = 0;
 	std::cout << "뇌 생성자를 호출하였습니다." << std::endl;
+}
+
+Brain::Brain(const Brain& brain)
+{
+	*this = brain;
+	std::cout << "뇌 복사 생성자를 호출하였습니다." << std::endl;
 }
 
 Brain::~Brain()

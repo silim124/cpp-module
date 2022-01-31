@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 21:55:23 by silim             #+#    #+#             */
-/*   Updated: 2022/01/31 21:55:24 by silim            ###   ########.fr       */
+/*   Created: 2022/01/31 21:56:07 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 02:55:27 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ Dog::Dog()
 
 Dog::Dog(const Dog& dog)
 {
-	_type = dog._type;
-	_brain = new Brain;
+	*this = dog;
 	std::cout << "멍멍이 복사 생성자를 호출하였습니다." << std::endl;
 }
 
 Dog&	Dog::operator=(const Dog& dog)
 {
 	_type = dog._type;
-	std::cout << "Dog 대입연산자 (" << _type << ")을 호출하였습니다." << std::endl;
+	_brain = new Brain(*dog._brain);
+	std::cout << "Dog 대입연산자 (" << _type << ")을 호출하였습니다. " << &dog._brain << " to " << &_brain << std::endl;
 	return (*this);
 }
 
