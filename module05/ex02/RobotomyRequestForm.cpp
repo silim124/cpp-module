@@ -28,7 +28,6 @@ void	RobotomyRequestForm::execute(Bureaucrat &b) {
 		throw(NoSignException());
 	if (b.getGrade() > this->getGrade())
 		throw(GradeTooLowException());
-
 	std::cout << b.getName() << " 관료가 " << getName() << "을 실행하였습니다." << std::endl;
 	srand(time(0));
 	if (rand() % 2)

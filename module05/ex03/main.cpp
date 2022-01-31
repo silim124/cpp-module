@@ -11,6 +11,8 @@ int main ()
 	Form * scf;
 	Form * rrf;
 	Form * ppf;
+
+	std::cout << someRandomIntern << std::endl;
 	std::cout <<"====Test_Wrong_Form====" << std::endl;
 	try
 	{

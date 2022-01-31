@@ -3,9 +3,16 @@
 Intern::Intern()
 {
 }
+
 Intern::~Intern()
 {
+	for (int i = 0; i < 3; i++)
+	{
+		if (_forms[i])
+			delete (_forms[i]);
+	}
 }
+
 Intern::Intern(Intern const &intern)
 {
 	*this = intern;
@@ -15,19 +22,23 @@ Intern &Intern::operator=(Intern const &intern)
 	(void)intern;
 	return (*this);
 }
+
 Form *Intern::makeForm(std::string const &form, std::string const &target)
 {
-	Form *newForm;
+	_forms[0] = new PresidentialPardonForm(target);
+	_forms[1] = new RobotomyRequestForm(target);
+	_forms[2] = new ShrubberyCreationForm(target);
 
-	if (form == "robotomy request")
-		newForm = new RobotomyRequestForm(target);
-	else if (form == "presidential pardon")
-		newForm = new PresidentialPardonForm(target);
-	else if (form == "shrubbery creation")
-		newForm = new ShrubberyCreationForm(target);
-	else
-		throw Form::UnknownFormException();
-	return (newForm);
+	std::string form_string[3] = \
+		{"robotomy request", \
+		"presidential pardon", \
+		"shrubbery creation"};
+	for (int i = 0; i < 3; i++)
+		if (form_string[i] == form)
+			return (_forms[i]);
+	throw Form::UnknownFormException();
+	return (NULL);
+
 }
 
 std::ostream &operator<<(std::ostream &o, Intern const &intern)
