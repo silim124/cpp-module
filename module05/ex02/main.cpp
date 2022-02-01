@@ -1,39 +1,100 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/01 21:04:39 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 21:04:40 by silim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-int main()
+int main ()
 {
-	Bureaucrat	a("a", 137);
-	Bureaucrat	b("b", 1);
-	std::cout << std::endl;
+	std::cout << std::endl << "====Test_ShrubberyCreationForm_sign====" << std::endl;
+	try
+	{
+		ShrubberyCreationForm scf("SCF Form");
+		Bureaucrat bur("Bill",150);
+		scf.beSigned(bur);
+		bur.executeForm(scf);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	std::cout << a;
-	std::cout << b << std::endl;
+	std::cout << std::endl << "====Test_ShrubberyCreationForm_execve====" << std::endl;
+	try
+	{
+		ShrubberyCreationForm scf("SCF Form");
+		Bureaucrat bur("Bill",140);
+		scf.beSigned(bur);
+		bur.executeForm(scf);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	Form *f1 = new ShrubberyCreationForm("shrubbery");
-	Form *f2 = new RobotomyRequestForm("Robot");
-	Form *f3 = new PresidentialPardonForm("President");
+	std::cout << std::endl << "====Test_ShrubberyCreationForm_correct====" << std::endl;
+	try
+	{
+		ShrubberyCreationForm scf("SCF Form");
+		Bureaucrat bur("Bill",1);
+		scf.beSigned(bur);
+		bur.executeForm(scf);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	std::cout << *f1 << std::endl;
-	std::cout << *f2 << std::endl;
-	std::cout << *f3 << std::endl;
-	std::cout << std::endl;
+	std::cout << std::endl << "====Test_RobotomyRequestForm_correct====" << std::endl;
+	try
+	{
+		RobotomyRequestForm rrf("RRF Form");
+		Bureaucrat bur("Bill",1);
+		rrf.beSigned(bur);
+		bur.executeForm(rrf);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	b.signForm(*f1);
-	b.signForm(*f2);
-	b.signForm(*f3);
-	std::cout << std::endl;
-	b.executeForm(*f1);
-	b.executeForm(*f2);
-	b.executeForm(*f3);
-	std::cout << std::endl;
 
-	delete f1;
-	delete f2;
-	delete f3;
+	std::cout << std::endl << "====Test_PresidentialPardonForm_correct====" << std::endl;
+	try
+	{
+		PresidentialPardonForm ppf("PPF Form");
+		Bureaucrat bur("Bill",1);
+		ppf.beSigned(bur);
+		bur.executeForm(ppf);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << std::endl << "====Test_copy====" << std::endl;
+	{
+		Bureaucrat bur("Bill",138);
+		ShrubberyCreationForm scf("SCF Form");
+		std::cout << scf << std::endl;
+		ShrubberyCreationForm scf2("SCF Form2");
+		scf2.beSigned(bur);
+		std::cout << scf2 << std::endl;
+		scf = scf2;
+		std::cout << scf << std::endl;
+	}
 
 	return 0;
 }

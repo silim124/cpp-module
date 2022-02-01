@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:56:13 by silim             #+#    #+#             */
-/*   Updated: 2022/02/01 00:52:29 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 14:14:20 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 int main()
 {
-	//Animal test;
 	Animal* animal[2];
 	animal[0] = new Dog();
 	animal[1] = new Cat();

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/01 21:05:32 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 21:05:32 by silim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Intern.hpp"
 
 Intern::Intern()
@@ -38,7 +50,6 @@ Form *Intern::makeForm(std::string const &form, std::string const &target)
 			return (_forms[i]);
 	throw Form::UnknownFormException();
 	return (NULL);
-
 }
 
 std::ostream &operator<<(std::ostream &o, Intern const &intern)

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/01 21:04:02 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 21:04:03 by silim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 
-Form::Form(const std::string name, int grade, int sign_grade) : _name(name), _grade(grade), _sign_grade(sign_grade), _sign(false)
+Form::Form(const std::string name, int sign_grade, int grade ) : _name(name), _sign_grade(sign_grade), _grade(grade), _sign(false)
 {
 	if (_grade < 1 || _sign_grade < 1)
 		throw Form::GradeTooHighException();
@@ -8,10 +20,11 @@ Form::Form(const std::string name, int grade, int sign_grade) : _name(name), _gr
 		throw Form::GradeTooLowException();
 }
 
-Form::Form(const Form& f) : _name(f._name), _grade(f._grade), _sign_grade(f._sign_grade), _sign(f._sign)
+Form::Form(const Form& f) : _name(f._name), _sign_grade(f._sign_grade), _grade(f._grade), _sign(f._sign)
 {
 	std::cout << "Form 생성자를 호출하였습니다." << std::endl;
 }
+
 
 int	Form::getGrade() const
 {

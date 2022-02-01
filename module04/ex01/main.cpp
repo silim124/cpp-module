@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 21:56:13 by silim             #+#    #+#             */
-/*   Updated: 2022/02/01 02:50:21 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 20:04:03 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int main()
 	basic.printIdeas();
 	Dog tmp = basic;
 	tmp.printIdeas();
+
 
 	std::cout << "-------------------" << std::endl;
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/01 21:04:05 by silim             #+#    #+#             */
+/*   Updated: 2022/02/01 21:04:05 by silim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FORM_HPP
 # define FORM_HPP
 
@@ -11,12 +23,12 @@ class Bureaucrat;
 class Form{
 	private:
 		const	std::string		_name;
-		const	int				_grade;
 		const	int				_sign_grade;
+		const	int				_grade;
 		bool					_sign;
 
 	public:
-		Form(const std::string name, int grade, int sign_grade);
+		Form(const std::string name, int sign_grade, int grade);
 		Form(const Form& f);
 		~Form();
 		Form& operator=(const Form& f);
