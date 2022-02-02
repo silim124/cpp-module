@@ -32,7 +32,7 @@ Convert& Convert::operator=(const Convert& convert)
 	return *this;
 }
 
-bool	Convert::checkType(std::string str)
+bool	Convert:: checkType(std::string str)
 {
 	char *p;
 	double tmp;
