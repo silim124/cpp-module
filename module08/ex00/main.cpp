@@ -5,24 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 12:28:22 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 15:49:03 by silim            ###   ########.fr       */
+/*   Created: 2022/02/03 18:01:59 by silim             #+#    #+#             */
+/*   Updated: 2022/02/03 18:02:40 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "easyfind.hpp"
 
 int main()
 {
-	int tab[] = { 0, 1, 2, 3, 4 };
-	std::cout << "Origin: " << "{ 0, 1, 2, 3, 4 }" << std::endl;
-	::iter(tab, sizeof(*tab), print);
-	std::cout << std::endl;
+	std::vector<int>			vect;
+	std::vector<int>::iterator	tmp;
 
-	std::string str = "this is test";
-	std::cout << "Origin: \"" << str << '\"' << std::endl;
-	iter(str.c_str(), str.length(), print);
-	std::cout << std::endl;
-
+	for (int i = 0; i < 100; i += 2)
+		vect.push_back(i);
+	for (int i = 0; i < 11; i++)
+	{
+		try
+		{
+			std::cout << "찾을 값: " << i * i << std::endl;
+			easyfind(vect, i * i);
+			std::cout << "성공!" << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+			std::cout << "실패!" << std::endl;
+		}
+		std::cout << std::endl;
+	}
 	return 0;
 }

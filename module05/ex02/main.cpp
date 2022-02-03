@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 21:04:39 by silim             #+#    #+#             */
-/*   Updated: 2022/02/01 21:04:40 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/02 00:25:06 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int main ()
 		ShrubberyCreationForm scf("SCF Form");
 		Bureaucrat bur("Bill",140);
 		scf.beSigned(bur);
+		std::cout << scf.getSign() << std::endl;
 		bur.executeForm(scf);
 	}
 	catch(const std::exception& e)

@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 21:04:02 by silim             #+#    #+#             */
-/*   Updated: 2022/02/01 21:04:03 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/01 21:31:20 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Form::Form(const Form& f) : _name(f._name), _sign_grade(f._sign_grade), _grade(f
 {
 	std::cout << "Form 생성자를 호출하였습니다." << std::endl;
 }
-
 
 int	Form::getGrade() const
 {
