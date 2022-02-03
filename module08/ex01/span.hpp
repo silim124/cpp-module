@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:02:10 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 18:02:29 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/03 18:06:10 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,35 @@
 
 class Span
 {
-private:
-	std::vector<int>	_sp;
-	unsigned int		_N;
+	private:
+		unsigned int		_N;
+		std::vector<int>	_sp;
 
-public:
-	Span(unsigned int N = 0);
-	~Span();
-	Span(const Span&);
-	Span &operator=(const Span& op);
+	public:
+		Span(unsigned int N = 0);
+		~Span();
+		Span(const Span&);
+		Span &operator=(const Span& op);
 
-	void	addNumber(int n);
-	int		shortestSpan();
-	int		longestSpan();
-	void	RandomInit();
+		void	addNumber(int n);
+		int		shortestSpan();
+		int		longestSpan();
+		void	RandomInit();
 
-	class SpIsFull: public std::exception
-	{
-		virtual const char* what() const throw()
+		class SpIsFull: public std::exception
 		{
-			return ("Span은 꽉 찼습니다.");
-		}
-	};
-	class SpIsTooSmall: public std::exception
-	{
-		virtual const char* what() const throw()
+			virtual const char* what() const throw()
+			{
+				return ("Span은 꽉 찼습니다.");
+			}
+		};
+		class SpIsTooSmall: public std::exception
 		{
-			return ("Span은 너무 작습니다.");
-		}
-	};
+			virtual const char* what() const throw()
+			{
+				return ("Span은 너무 작습니다.");
+			}
+		};
 };
 
 #endif

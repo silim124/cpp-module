@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:02:13 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 18:02:27 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/03 18:08:46 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main()
 	MutantStack<int>	mstack;
 
 	mstack.push(5);
+	mstack.push(10);
 	mstack.push(17);
 
 	std::cout << "mstack.top():\t" << mstack.top() << std::endl;
@@ -30,7 +31,6 @@ int main()
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
-	//[...]
 	mstack.push(0);
 
 	MutantStack<int>::iterator it = mstack.begin();

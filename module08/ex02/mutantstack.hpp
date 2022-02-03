@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:02:21 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 18:02:22 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/03 18:10:09 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,35 +48,35 @@ public:
 
 	iterator begin() // 인덱스 시작
 	{
-		return c.begin();
+		return this->c.begin();
 	};
 
 	iterator end() // 인덱스 끝
 	{
-		return c.end();
+		return this->c.end();
 	};
 
 	const_iterator begin() const // 인덱스 시작
 	{
-		return c.begin();
+		return this->c.begin();
 	};
 
 	const_iterator end() const // 인덱스 끝
 	{
-		return c.end();
+		return this->c.end();
 	};
 
 	reverse_iterator rbegin() // 역 인덱스 시작
 	{
-		return c.rbegin();
+		return this->c.rbegin();
 	};
 
 	reverse_iterator rend() // 역 인덱스 끝
 	{
-		return c.rend();
+		return this->c.rend();
 	};
 
-	const_reverse_iterator rbegin() const //
+	const_reverse_iterator rbegin() const
 	{
 		return std::stack<T>::c.rbegin();
 	};
