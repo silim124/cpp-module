@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 12:28:30 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 12:28:30 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/03 12:50:57 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@
 int main()
 {
 	Array<int> numbers(MAX_VAL);
-	int* mirror = new int[MAX_VAL];
-	srand(time(NULL));
+	int* mirror = new int[MAX_VAL]; // numbers 배열 복사
+	srand(time(NULL)); // 난수 초기화
 	for (int i = 0; i < MAX_VAL; i++)
 	{
-		const int value = rand();
-		numbers[i] = value;
-		mirror[i] = value;
+		const int value = rand(); // 난수 생성
+		numbers[i] = value; // 배열에 저장
+		mirror[i] = value; // 복사 배열에 저장
 	}
 	//SCOPE
 	{
-		Array<int> tmp = numbers;
-		Array<int> test(tmp);
+		Array<int> tmp = numbers; // numbers 배열 대입 연산
+		Array<int> test(tmp); // numbers 배열 복사 생성
 	}
 
 	for (int i = 0; i < MAX_VAL; i++)
@@ -42,7 +42,7 @@ int main()
 	}
 	try
 	{
-		numbers[-2] = 0;
+		numbers[-2] = 0; // 인덱스 초과 오류
 	}
 	catch(const std::exception& e)
 	{
@@ -50,7 +50,7 @@ int main()
 	}
 	try
 	{
-		numbers[MAX_VAL] = 0;
+		numbers[MAX_VAL] = 0; // 인덱스 초과 오류
 	}
 	catch(const std::exception& e)
 	{
@@ -59,7 +59,7 @@ int main()
 
 	for (int i = 0; i < MAX_VAL; i++)
 	{
-		numbers[i] = rand();
+		numbers[i] = rand(); // 난수 생성
 	}
 	delete [] mirror;
 

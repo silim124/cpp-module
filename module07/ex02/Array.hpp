@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 12:28:27 by silim             #+#    #+#             */
-/*   Updated: 2022/02/03 12:28:28 by silim            ###   ########.fr       */
+/*   Updated: 2022/02/03 12:50:55 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,8 @@ class Array
 
 		Array<T>	&operator=( const Array<T> &origin ){
 			std::cout << "대입연산자가 호출되었습니다. " << std::endl;
-			if (this == &origin)
-				return *this;
-			if (this->_len > 0)
-				delete [] this->_array;
+			if (_len > 0)
+				delete [] _array;
 			_len = origin.size();
 			_array = new T[_len];
 			for (unsigned int i = 0; i < _len; i++)
